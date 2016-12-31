@@ -11,7 +11,6 @@ import { Meteor } from 'meteor/meteor';
 import Nav  from './Nav.jsx';
 import Times  from './Times.jsx';
 
-
 const Home = () => {
   return (
     <div>
@@ -40,30 +39,29 @@ const Fun = () => {
 const DemoPages = { Home, Away, Fun, Times };
 
 export default class App  extends Component {
-	constructor(props) {
-  	super(props);
+  constructor(props) {
+    super(props);
 
-		this.state = {
- 			currentTab: 'Home',
- 		};
- 		this.changeTab = this.changeTab.bind(this);
-	}
+    this.state = {
+       currentTab: 'Home',
+     };
+     this.changeTab = this.changeTab.bind(this);
+  }
 
   changeTab(tab) {
       this.setState({ currentTab: tab });
   }
 
-	render() {
+  render() {
 
-		const DemoPage = DemoPages[this.state.currentTab];
+    const DemoPage = DemoPages[this.state.currentTab];
 
-  	return (
-  		<div>
-				<Nav changeTab={this.changeTab} DemoPages={DemoPages} currentTab={this.state.currentTab} />
-				<DemoPage />
-				
-			</div>
-		);
-	}
+    return (
+      <div>
+        <Nav changeTab={this.changeTab} DemoPages={DemoPages} currentTab={this.state.currentTab} />
+        <DemoPage />
+      </div>
+    );
+  }
 }
 
