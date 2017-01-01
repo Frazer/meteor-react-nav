@@ -3,6 +3,8 @@
 
 to run the demo, clone this repo
 
+in the directory where you cloned it
+
 run
 ```
  meteor npm install --save react react-dom classnames
@@ -11,9 +13,9 @@ run
 
 then
 ```
-meteor
+meteor --release 1.4.1.1
 ```
-in the directory where you cloned this.
+
 
 
  inspired from  https://codepen.io/trey/post/tabbed-navigation-react
