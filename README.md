@@ -9,7 +9,7 @@ run
  meteor add react-meteor-data
 ```
 
-then 
+then
 ```
 meteor
 ```
